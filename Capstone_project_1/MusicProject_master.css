@@ -1,0 +1,90 @@
+/*
+body{
+  background: url(https://content3.jdmagicbox.com/comp/delhi/h4/011pxx11.xx11.131221185959.n2h4/catalogue/music-emporio-rohini-sector-14-delhi-musical-instrument-dealers-2qjjkqc.jpg);
+}
+*/
+
+#myVideo {
+  position: fixed;
+  top: 0.5%;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+}
+
+/* stays in this color no matter what */
+.navbar{
+  background-color: #000 !important;
+  opacity: 0.75;
+  position: relative;
+  z-index: 3;
+}
+
+/* styling the brand in the navigation bar */
+.navbar .navbar-brand{
+  color: #FFF;
+  font-family: 'Righteous', cursive;
+}
+
+/* hovering over the brand and the items in navigation bar */
+.navbar .navbar-brand:hover, .navbar .navbar-nav li a:hover{
+  color: #ffff00 !important;  /* yellow */
+}
+
+/* Items in the navigation bar */
+.navbar .navbar-nav li a{
+  color: #fff !important;    /* white */
+}
+
+/* Items in the dropdown */
+.navbar .nav-item .dropdown-menu .dropdown-item{
+  color:#000 !important;   /* black */
+  background-color: #fff !important;   /* white */
+  opacity: 0.95 !important;
+}
+
+/* dropdown hover */
+.navbar .nav-item .dropdown-menu .dropdown-item:hover{
+  background-color: #707070 !important ; /* dark gray */
+  color: #fff !important; /* white */
+}
+
+.container .slider{
+  margin-top: 40px;
+
+}
+
+
+
+/* hamburger button */
+.navbar-toggler{
+ background-color: #fff !important;
+}
+
+.container .jumbotron{
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+  opacity: 0.8;
+  background-color: #000;
+  color: #fff !important;
+}
+
+
+
+.container .textual{
+  padding: 20px;
+  background-color: #fff !important;
+}
+
+
+.container .row{
+  border: 10px;
+  border-color: white;
+}
+
+h2{
+  color: #fff !important;
+}

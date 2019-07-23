@@ -1,0 +1,51 @@
+
+body{
+  background: url(http://images2.fanpop.com/images/photos/3300000/Musical-instruments-instruments-3326948-1920-1200.jpg);
+}
+
+/* stays in this color no matter what */
+.navbar{
+  background-color: #000 !important;
+  opacity: 0.75;
+}
+
+/* styling the brand in the navigation bar */
+.navbar .navbar-brand{
+  color: #FFF;
+  font-family: 'Righteous', cursive;
+}
+
+/* hovering over the brand and the items in navigation bar */
+.navbar .navbar-brand:hover, .navbar .navbar-nav li a:hover{
+  color: #ffff00 !important;  /* yellow */
+}
+
+/* Items in the navigation bar */
+.navbar .navbar-nav li a{
+  color: #fff !important;    /* white */
+}
+
+/* Items in the dropdown */
+.navbar .nav-item .dropdown-menu .dropdown-item{
+  color:#000 !important;   /* black */
+  background-color: #fff ;   /* white */
+}
+
+/* dropdown hover */
+.navbar .nav-item .dropdown-menu .dropdown-item:hover{
+  background-color: #707070 !important;   /* dark gray */
+  color: #fff !important; /* white */
+}
+
+/* hamburger button */
+.navbar-toggler{
+ background-color: #fff !important;
+}
+
+
+
+.container .jumbotron{
+  margin-top: 30px;
+  padding-top: 20px;
+  opacity: 0.85;
+}
