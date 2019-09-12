@@ -1,0 +1,28 @@
+<header>
+  <div class="title-container">
+      <h1 class="title">Discover your home</h1>
+  </div>
+    <fieldset class="field-container">
+      <input #searchPlace ngx-google-places-autocomplete #placesRef="ngx-places"  placeholder="Search your place..." class="google-place-input" class="field"
+      (keyup.enter)="getPostofSearchedPlaces(searchPlace.value)">
+      <ul style="list-style-type: none;">
+        <li *ngFor="let key of addrKeys">
+          <span style="font-weight: bold">{{key}}</span>: <span>{{addr[key]}}</span>
+        </li>
+      </ul>
+      <div class="icons-container">
+        <div class="icon-search"></div>
+        <div class="icon-close">
+        <div class="x-up"></div>
+        <div class="x-down"></div>
+      </div>
+    </div>
+    </fieldset>
+</header>
+
+<!-- <main>
+  <h2>Information about Website</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa facilis, labore debitis nesciunt ipsam odio corporis architecto reiciendis voluptas ab quibusdam ratione rerum tempore voluptatibus libero cumque dignissimos vero hic!</p>
+</main> -->
+
+<router-outlet></router-outlet>

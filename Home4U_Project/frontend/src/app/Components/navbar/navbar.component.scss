@@ -1,0 +1,51 @@
+.sidenav-container {
+  height: 200px;
+}
+
+img{
+  height:60px;
+  text-align: center;
+}
+
+h1 {
+  color: aliceblue;
+}
+
+a {
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 2.5em;
+  text-decoration:none;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+}
+
+li a:hover {
+  //background-color: #111;
+  background-color: #6078EA;
+}
+
+h3 {
+  margin-right: 20px;
+  margin-left: 20px;
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,104 @@
+<div id="wrapper">
+      <h4>Account Settings</h4>
+      <hr>
+      <form [formGroup]="updateUser" class="update-user">
+   
+         <div class="form-row">
+            <!-- <label id="username">EmailId : </label>{{userdetails.emailId}} -->
+            <div class="col" class="col-sm-4">
+                  <label id="emailId">User: </label>
+                  <input #emailId matInput type="text" formControlName="emailId" class="form-control"  placeholder={{userdetails.emailId}} readonly>
+            </div>
+            <!-- <label id="password">Password</label>{{userdetails.password}} -->
+         </div>
+         <div class="form-row">
+            <div class="col" class="col-sm-4">
+               <label id="firstName">First Name</label>
+               <input #firstName matInput type="text" formControlName="firstName" class="form-control" placeholder="First Name">
+            </div>
+         
+            <div class="col" class="col-sm-4">
+               <label id="lastName">Last Name</label>
+               <input #lastName matInput type="text" formControlName="lastName" class="form-control" placeholder="Last Name">
+            </div>
+         </div>
+         <div class="form-row">
+            <div class="col">
+               <label id="phone">Phone</label>
+               <input #phone matInput formControlName="phone" type="tel" class="form-control" placeholder="---/---/----">
+            </div>
+            <div class="col">
+              <label id="city">City</label>
+              <input #city matInput formControlName="city" class="form-control" type="text" placeholder="City">
+            </div>
+            <div class="col" class="col-sm-4">
+              <label id="state" class="col-sm-4">State</label>
+              <select #state matInput formControlName="state" class="form-control" type="text" placeholder="State" id="sel1">
+                  <option>Massachusetts</option>
+                  <option>Maine</option>
+                  <option>New Jersey</option>
+              </select>
+            </div>
+            <div class="col">
+              <label id="zip">Zip</label>
+              <input #zip matInput formControlName="zip" class="form-control" type="text" placeholder="Zip">
+            </div>
+        </div>
+        <!-- <h4>Other Information</h4>
+            <hr>
+            <div class="form-row">
+               <div class="col" class="col-sm-4">
+                  <label id="pet">Pets</label>
+                  <input matInput type="checkbox" formControlName="cats" class="form-control">Cats
+                  <input matInput type="checkbox" formControlName="dogs" class="form-control">Dogs
+                  <input matInput type="checkbox" formControlName="others" class="form-control">Others
+               </div>
+               <div class="col" class="col-sm-4">
+                  <label id="gender">Gender</label>
+                  <input matInput type="radio" formControlName="male" class="form-control">Male
+                  <input matInput type="radio" formControlName="female" class="form-control">Female
+               </div>
+               <div class="col" class="col-sm-4">
+                  <label id="maritalStatus">Marital Status</label>
+                  <input matInput type="radio" formControlName="cats" class="form-control">Married
+                  <input matInput type="radio" formControlName="dogs" class="form-control">Single
+               </div>
+            </div>
+            <div class="form-row">
+               <div class="col" class="col-sm-4">
+                  <label id="incomeRange" class="col-sm-4">Income Range</label>
+                  <select #incomeRange matInput formControlName="incomeRange" class="form-control" type="text" placeholder="income" id="ir1">
+                        <option>Income Range</option>
+                        <option>$0-35K</option>
+                        <option>36K-75K</option>
+                        <option>76K-120K</option>
+                        <option>126K+</option>
+                  </select>
+               </div>
+               <div class="col" class="col-sm-4">
+                  <label id="noOfChildren" class="col-sm-4">Number of Children</label>
+                  <select #noOfChildren matInput formControlName="noOfChildren" class="form-control" type="text" placeholder="Choose # of Children" id="chi1">
+                        <option>Income Range</option>
+                        <option>$0-35K</option>
+                        <option>36K-75K</option>
+                        <option>76K-120K</option>
+                        <option>126K+</option>
+                  </select>
+               </div> -->
+               <!-- <div class="col" class="col-sm-4">
+                  <label id="noOfChildren" class="col-sm-4">Number of Children</label>
+                  <select #noOfChildren matInput formControlName="noOfChildren" class="form-control" type="text" placeholder="Choose # of Children" id="chi1">
+                        <option>Income Range</option>
+                        <option>$0-35K</option>
+                        <option>36K-75K</option>
+                        <option>76K-120K</option>
+                        <option>126K+</option>
+                  </select>
+               </div> -->
+            <!-- </div> -->
+            <div>
+               <button (click)="updateUserInfo(firsName,lastName,phone,city,state,zip)" class="btn btn-info" id="updatebtn"> UPDATE </button>
+            </div>
+      </form>
+      </div>
+   

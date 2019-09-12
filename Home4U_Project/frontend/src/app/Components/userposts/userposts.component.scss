@@ -1,0 +1,112 @@
+$dark-gray: #404040;
+$alert-color:#ff0000;
+$white:#ffffff;
+$blue:#ffd29c;
+$dark-brown:#903107;
+
+input:focus{
+  border-color: $dark-brown!important;
+  box-shadow: 0 0 0 .1rem $dark-brown!important;
+  background-color: $blue!important;
+}
+
+img {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  width: 70%;
+}
+
+.searchInput{
+  background-color: #fff4;
+  height: 3em;
+  margin: 1%;
+  font-family: "Shadows Into Light", Arial;
+  padding-left: 2rem!important;
+}
+
+.card-picture {
+  width: 100%;
+  margin-bottom: 2%;
+  padding: 5px;
+  margin-left: 5%;
+  text-align: left;
+}
+.main_container {
+  margin:auto;
+  width: 50%;
+  text-align: center;
+  font-family: "Shadows Into Light", Arial;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  font-size: 20px;
+  margin-bottom: 2%;
+}
+.search-form {
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  font-size: 20px;
+  border:none;
+}
+
+.header-image {
+  background-image: url('https://home4u.com.mx/wp-content/uploads/2017/03/logoheaderwhite.png');
+  background-size: cover;
+}
+
+.button-like {
+  border: 2px solid $dark-gray;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 24px;
+  width: 100px;
+  height : 50px;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 3rem;
+  color: $dark-gray;
+  margin:0.5%;
+  transition: all ease 0.4s;
+
+  span {
+    margin-left: 0.5rem;
+  }
+
+  .material-icons,
+  span {
+    transition: all ease 0.4s;
+  }
+
+  &:focus {
+    background-color: transparent;
+
+    .material-icons,
+    span {
+      color: $dark-gray;
+    }
+  }
+
+  &:hover {
+    border-color: $alert-color;
+    background-color: transparent;
+
+    .material-icons,
+    span {
+      color: $alert-color;
+    }
+  }
+}
+
+.liked {
+  background-color: $alert-color;
+  border-color: $alert-color;
+  .material-icons,
+  span {
+    color: $white;
+  }
+}
+
+.jumbotron main_container{
+  width: 10px;
+  height:80px;
+}

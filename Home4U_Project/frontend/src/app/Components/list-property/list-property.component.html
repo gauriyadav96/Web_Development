@@ -1,0 +1,28 @@
+<br>
+<div class="form-group search-form">
+  <input class="searchInput" placeholder="Search here" type="text" [(ngModel)]="searchTerm">
+</div>
+<br>
+<div class= "jumbotron main_container" ng-controller="favoriteController" *ngFor="let post of posts | filter: searchTerm; let i = index" (click)="viewDetails(post)">
+<mat-card class="card-picture">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title>{{post.title}}</mat-card-title>
+    <mat-card-subtitle>{{post.propertyType}}</mat-card-subtitle>
+    <mat-card-subtitle>{{post.streetAddress1}}  {{post.streetAddress2}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://media-cdn.trulia-local.com/neighborhood-media-service-prod/ma/boston/south-dorchester/1371-ma_bos_south_dorchester_275424_151_1200x_cfit.jpg">
+  <mat-card-content>
+    <p>
+      {{post.description}}
+    </p>
+    <p>
+      Posted By : {{post.firstname}}<br>
+      Price: {{post.price}}
+    </p>
+  </mat-card-content>
+  <button class="button button-like" [ngClass]="likestatus ? 'liked' : 'button-like'" (click)="viewDetails(post)">
+    <span>View</span>
+  </button>
+</mat-card>
+</div>

@@ -1,0 +1,65 @@
+h4{
+  margin-top: 20px;
+  margin-left: 50px;
+  color: coral;
+}
+
+hr{
+  width:112%;
+}
+
+#emailId :read-only{
+  background-color: grey
+} 
+
+#username{
+  border: 1px solid black
+}
+
+#wrapper {
+  margin-top: 20px;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+}
+
+.form-control{
+  width: 400px;
+  margin: 5px;
+}
+
+#savebtn{
+  margin-top: 10px;
+  margin-left: 80px;
+}
+
+#updatebtn{
+  margin-top: 10px;
+}
+
+#delbtn{
+  margin-top: 10px;
+  margin-left: 80px;
+}
+
+#upload{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #17a2b8;
+}
+
+#file{
+  margin-top: 20px;
+  //margin-bottom: 50px;
+}
+
+#uploadImage{
+  background-color: coral;
+  width: 500px;
+  height: 70px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 50px 50px 50px 50px;
+
+}

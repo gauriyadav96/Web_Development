@@ -1,0 +1,20 @@
+<div class= "jumbotron main_container">
+  <mat-card class="card-picture" id="contentToConvert">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+      <mat-card-title>{{selectedpost.title}}</mat-card-title>
+      <mat-card-subtitle>{{selectedpost.propertyType}}</mat-card-subtitle>
+      <mat-card-subtitle>{{selectedpost.streetAddress1}}  {{selectedpost.streetAddress2}}, {{selectedpost.city}}, {{selectedpost.state}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://media-cdn.trulia-local.com/neighborhood-media-service-prod/ma/boston/south-dorchester/1371-ma_bos_south_dorchester_275424_151_1200x_cfit.jpg">
+    <mat-card-content>
+      <p>
+        {{selectedpost.description}}<br>
+        Posted By : {{selectedpost.firstname}}<br>
+        Price: {{selectedpost.price}}<br>
+        Contact :{{selectedpost.email}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+    <button type="button" (click)= "savePdf()" class="btn btn-primary btn-lg">Save to PDF</button>
+</div>

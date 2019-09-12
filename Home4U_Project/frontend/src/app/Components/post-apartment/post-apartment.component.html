@@ -1,0 +1,222 @@
+
+<div id="wrapper">
+
+  <h4>Contact Information</h4>
+  <hr>
+
+  <form [formGroup]="createForm" class="create-form">
+
+    <div class="form-row">
+      <div class="col" class="col-sm-4">
+        <label for="firstname" id="firstname">First Name</label>
+        <input #firstname matInput type="text" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors}" placeholder="First Name">
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+          <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+      </div>
+
+      <div class="col" class="col-sm-4">
+        <label id="lastname" for="lastName">Last Name</label>
+        <input #lastname matInput type="text" formControlName="lastname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors}" placeholder="Last Name">
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+          <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+      </div>
+    </div>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <label id="email">Email</label>
+        <input #email matInput formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors}" type="email" placeholder="name@example.com">
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">Email is required</div>
+      </div>
+      </div>
+
+      <div class="col">
+        <label id="phone">Phone</label>
+        <input #phone matInput formControlName="phone" type="tel" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors}" placeholder="Phone Number">
+        <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+          <div *ngIf="f.phone.errors.required">Phone is required</div>
+      </div>
+      </div>
+
+      <div class="col">
+        <label id="extension">Extension</label>
+        <input #extension matInput formControlName="extension" [ngClass]="{ 'is-invalid': submitted && f.extension.errors}" class="form-control" type="tel" placeholder="Extension">
+        <div *ngIf="submitted && f.extension.errors" class="invalid-feedback">
+          <div *ngIf="f.extension.errors.required">Extension is required</div>
+      </div>
+      </div>
+
+      <div class="col" class="col-sm-4">
+        <label id="advertiser" class="col-sm-4">Advertiser Type</label>
+        <select #advertiserType matInput formControlName="advertiserType" class="form-control" type="text" placeholder="Select Advertiser Type" id="sel1" [ngClass]="{ 'is-invalid': submitted && f.advertiserType.errors}">
+          <option>Select Advertiser Type</option>
+          <option>Agent</option>
+          <option>Owner</option>
+        </select>
+        <div *ngIf="submitted && f.advertiserType.errors" class="invalid-feedback">
+          <div *ngIf="f.advertiserType.errors.required">Advertiser Type is required</div>
+      </div>
+    </div>
+    </div>
+
+    <h4>Property Location</h4>
+    <hr>
+    <div class="form-row">
+      <div class="col" class="col-sm-4">
+        <label id="streetAddress1">Street Address 1</label>
+        <input #streetAddress1 matInput type="text" formControlName="streetAddress1" class="form-control" placeholder="Street Address 1" [ngClass]="{ 'is-invalid': submitted && f.streetAddress1.errors}">
+        <div *ngIf="submitted && f.streetAddress1.errors" class="invalid-feedback">
+          <div *ngIf="f.advertiserType.errors.required">Street Address 1 is required</div>
+      </div>
+      </div>
+
+      <div class="col" class="col-sm-4">
+        <label id="streetAddress2">Street Address 2</label>
+        <input #streetAddress2 matInput type="text" formControlName="streetAddress2" class="form-control" placeholder="Street Address 2" [ngClass]="{ 'is-invalid': submitted && f.streetAddress2.errors}">
+        <div *ngIf="submitted && f.streetAddress2.errors" class="invalid-feedback">
+          <div *ngIf="f.streetAddress2.errors.required">Street Address 2 is required</div>
+        </div>
+    </div>
+</div>
+
+    <div class="form-row">
+      <div class="col">
+        <label id="city">City</label>
+        <input #city matInput formControlName="city" class="form-control" type="text" placeholder="City" [ngClass]="{ 'is-invalid': submitted && f.city.errors}">
+        <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+          <div *ngIf="f.city.errors.required">City is required</div>
+        </div>
+      </div>
+
+      <div class="col" class="col-sm-4">
+        <label id="state">State</label>
+        <input #state matInput formControlName="state" class="form-control" type="text" placeholder="State" [ngClass]="{ 'is-invalid': submitted && f.state.errors}">
+        <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+          <div *ngIf="f.state.errors.required">State is required</div>
+        </div>
+      </div>
+
+      <div class="col">
+        <label id="zip">Zip</label>
+        <input #zip matInput formControlName="zip" class="form-control" type="text" placeholder="Zip" [ngClass]="{ 'is-invalid': submitted && f.zip.errors}">
+        <div *ngIf="submitted && f.zip.errors" class="invalid-feedback">
+          <div *ngIf="f.zip.errors.required">Zip is required</div>
+        </div>
+      </div>
+    </div>
+
+    <h4>Property Details</h4>
+    <hr>
+    <div class="form-row">
+      <div class="col" class="col-sm-4">
+        <label id="price">Price</label>
+        <input #price matInput type="text" formControlName="price" class="form-control" placeholder="Price" [ngClass]="{ 'is-invalid': submitted && f.price.errors}">
+        <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+          <div *ngIf="f.price.errors.required">Price is required</div>
+        </div>
+      </div>
+
+      <div class="col" class="col-sm-4">
+        <label id="propertyType">Property Type</label>
+        <select #propertyType matInput formControlName="propertyType" class="form-control" type="text" placeholder="Select Property Type" [ngClass]="{ 'is-invalid': submitted && f.propertyType.errors}">
+          <option>Select Property Type</option>
+          <option>Apartment</option>
+          <option>Townhouse/Townhome</option>
+          <option>Single Family Home</option>
+          <option>Duplex</option>
+        </select>
+        <div *ngIf="submitted && f.propertyType.errors" class="invalid-feedback">
+          <div *ngIf="f.propertyType.errors.required">Property Type is required</div>
+      </div>
+    </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col" class="col-sm-4">
+        <label id="bedrooms">Bedrooms</label>
+        <select #bedrooms matInput formControlName="bedrooms" class="form-control" type="text" placeholder="Select Bedrooms" [ngClass]="{ 'is-invalid': submitted && f.bedrooms.errors}">
+          <option>Select Bedrooms</option>
+          <option>0</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+        <div *ngIf="submitted && f.propertyType.errors" class="invalid-feedback">
+          <div *ngIf="f.bedrooms.errors.required">Bedrooms is required</div>
+        </div>
+      </div>
+
+      <div class="col" class="col-sm-4">
+        <label id="bathrooms">Bath</label>
+        <select #bathrooms matInput formControlName="bathrooms" class="form-control" type="text" placeholder="Select Bath Type" [ngClass]="{ 'is-invalid': submitted && f.bathrooms.errors}">
+          <option>Select Bath</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+        <div *ngIf="submitted && f.bathrooms.errors" class="invalid-feedback">
+          <div *ngIf="f.bathrooms.errors.required">Bath is required</div>
+        </div>
+      </div>
+
+      <div class="col" class="col-sm-4">
+        <label id="forRent">For Rent</label>
+        <select #forRent matInput formControlName="forRent" class="form-control" type="text" placeholder="forRent" [ngClass]="{ 'is-invalid': submitted && f.rent.errors}">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+        <div *ngIf="submitted && f.forRent.errors" class="invalid-feedback">
+          <div *ngIf="f.forRent.errors.required">Rent is required</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col" class="col-sm-4">
+        <label id="description">Property Description</label>
+        <textarea #description matInput type="text" formControlName="description" class="form-control" placeholder="Enter Property Description Here" [ngClass]="{ 'is-invalid': submitted && f.description.errors}" style="width:295%">
+        </textarea>
+        <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+          <div *ngIf="f.description.errors.required">Property description is required</div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <h4>Upload Images of your Apartment</h4>
+    <div id="uploadImage">
+    <input type="file" name="photo" ng2FileSelect [uploader]="uploader" id="file" />
+    <button type="button" class="btn btn-success btn-s" id="upload"
+            (click)="uploader.uploadAll()"
+            [disabled]="!uploader.getNotUploadedItems().length" >
+      Upload
+    </button>
+    </div>
+    <hr>
+    <div>
+      <button (click)="updatePost(firstname.value,lastname.value,email.value,phone.value,extension.value,advertiserType.value,streetAddress1.value,streetAddress2.value,city.value,state.value,zip.value,price.value,propertyType.value,bedrooms.value,bathrooms.value,forRent.value,description.value)" class="btn btn-info" id="updatebtn"> UPDATE </button>
+      <button (click)="addPost(firstname.value,lastname.value,email.value,phone.value,extension.value,advertiserType.value,streetAddress1.value,streetAddress2.value,city.value,state.value,zip.value,price.value,propertyType.value,bedrooms.value,bathrooms.value,forRent.value,description.value)" class="btn btn-info" id="savebtn"> SAVE </button>
+      <button (click)="deletePost(_id)" class="btn btn-info" id="delbtn">CANCEL</button>
+
+    </div>
+
+
+
+  </form>
+</div>

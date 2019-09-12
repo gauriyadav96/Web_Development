@@ -1,0 +1,29 @@
+<div class= "jumbotron main_container">
+  <mat-card class="card-picture">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+      <mat-card-title>{{selectedpost.title}}</mat-card-title>
+      <mat-card-subtitle>{{selectedpost.propertyType}}</mat-card-subtitle>
+      <mat-card-subtitle>{{selectedpost.streetAddress1}}  {{selectedpost.streetAddress2}}, {{selectedpost.city}}, {{selectedpost.state}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://media-cdn.trulia-local.com/neighborhood-media-service-prod/ma/boston/south-dorchester/1371-ma_bos_south_dorchester_275424_151_1200x_cfit.jpg">
+    <mat-card-content>
+      <p>
+        Posted By : {{selectedpost.firstname}}<br> </p>
+       <p> Price: {{selectedpost.price}} </p>
+      <p> Apartment: {{selectedpost.streetAddress2}}</p>
+      <p> City: {{selectedpost.city}}</p>
+      <p> State:{{selectedpost.state}}</p>
+      <p>  Posted By : {{selectedpost.firstname}}</p>
+      <p> Price: {{selectedpost.price}}
+      </p>
+
+    </mat-card-content>
+    <!--<div *ngIf= "currentUser">-->
+      <button  class="button button-like" [ngClass]="likestatus ? 'liked' : 'button-like'" (click)="addRemoveFavorites(selectedpost)">
+        <span class="material-icons">favorite_border</span>
+        <span>Like</span>
+      </button>
+    <!--</div>-->
+  </mat-card>
+</div>

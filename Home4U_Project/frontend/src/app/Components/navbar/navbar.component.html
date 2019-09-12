@@ -1,0 +1,43 @@
+<nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
+  <ul>
+    <li>
+    <img (click)="navigateHomepage()" src="https://home4u.com.mx/wp-content/uploads/2017/03/logoheaderwhite.png">
+    </li>
+    <!-- <li>
+      <a mat-list-item href="/home">HomePage</a>
+    </li> -->
+    <li *ngIf= "currentUser">
+    <a mat-list-item href="/post-apartment">Post</a>
+    </li>
+    <li *ngIf= "currentUser">
+      <a mat-list-item href="/userProfile">View Profile</a>
+    </li>
+    <li *ngIf= "currentUser">
+      <a href="" [routerLink]="['/userpost']" >View your posts</a>
+    </li>
+    <li *ngIf= "currentUser">
+    <a mat-list-item href="/favorite-page">Favourites</a>
+    </li>
+    <li *ngIf= "!currentUser">
+      <a href="" [routerLink]="['/login']" >Already a user?</a>
+    </li>
+    <li *ngIf= "currentUser">
+      <a href="" (click)="logout()" >Logout</a>
+    </li>
+    <li *ngIf= "currentUser">
+    <h3>Welcome {{currentUser.firstName}}</h3>
+    </li>
+    <li *ngIf= "!currentUser">
+      <a id="myid" [routerLink]="['/register']" [routerLinkActive]="['active']">Register</a>
+      <!--<label id="user">/</label>-->
+    </li>
+    <li>
+      <a [routerLink]="['/viewContactDetails']">Contact us</a>
+      <!--<label id="user">/</label>-->
+    </li>
+  </ul>
+</nav>
+
+<!--</mat-toolbar>-->
+<router-outlet></router-outlet>
