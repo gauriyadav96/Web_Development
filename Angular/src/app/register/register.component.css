@@ -1,0 +1,20 @@
+.register{
+    opacity: 0.8;
+    background-color: black;
+    }
+    
+    header{
+        color: white;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    label {
+        color: white;
+        text-align: center;
+    }
+
+    hr{
+        background-color: aliceblue;
+    }

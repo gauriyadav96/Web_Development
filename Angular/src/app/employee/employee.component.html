@@ -1,0 +1,32 @@
+
+<app-dashboard></app-dashboard>
+<br>
+<div class="panel panel-default">
+  <!-- <div class="panel-heading">Employee List</div> -->
+  <div class="panel-body">
+      <div class="table-responsive">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Employee Id</th>
+                      <th>Full Name</th>
+                      <th>Department</th>
+                      <th>Designation</th>
+                      <th>Salary</th>
+                      <th>Contact</th>
+                  
+                 </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let emp of emps">
+                      <td>{{ emp.eid }}</td>
+                      <td>{{ emp.fname }}</td>
+                      <td>{{ emp.dept }}</td>
+                      <td>{{ emp.designation }}</td>
+                      <td>{{ emp.salary }}</td>
+                      <td>{{ emp.contact }}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>

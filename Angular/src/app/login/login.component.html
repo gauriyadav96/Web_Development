@@ -1,0 +1,28 @@
+<app-home></app-home>
+<div class="container">
+  <div class="jumbotron login">
+      <h1>Employee Login</h1><br>
+      
+        <form [formGroup]="empLoginForm" (ngSubmit)="loginEmp(empLoginForm.value)">
+            <div class="row">  
+                  <div class="col-md-12">
+                    <label for="username">Username:</label>
+                    <input type="text" formControlName="username" class="form-control" id="username" placeholder="Enter Employee ID">
+                  </div><br>
+            </div>
+            <br>
+            <div class="row">  
+                <div class="col-md-12">
+                    <label for="pwd">Password:</label>
+                    <input type="password" formControlName="password" class="form-control" id="password" placeholder="Enter Password" required>
+                </div><br>
+          </div>
+            <br><br>
+
+              <p class="text-center"><button type="submit" class="btn btn-success btn-lg text-center">Submit</button></p>
+        </form>
+    </div>
+  </div> 
+
+
+    

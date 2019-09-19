@@ -1,0 +1,60 @@
+<app-home></app-home>
+
+<br><br>
+<div class="container">
+  <div class="jumbotron register">
+    <header>Employee Registration</header>
+      <br><br>
+      <div class="regEmp">
+
+              <form [formGroup]="empForm" (ngSubmit)="registerEmp(empForm.value)"> 
+                <div class="row">  
+                      <div class="col-md-4">
+                        <label for="fname">First Name:</label>
+                        <input type="text" formControlName="fname" class="form-control" id="fname" placeholder="Enter First Name">
+                      </div><br>
+                      <div class="col-md-4">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" formControlName="lname" class="form-control" id="lname" placeholder="Enter Last Name">
+                      </div><br>
+                      <div class="col-md-4">
+                        <label for="contact">Contact:</label>
+                        <input type="number" formControlName="contact" class="form-control" id="contact" placeholder="Enter Contact">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                      <div class="col-md-4">
+                        <label for="salary">Salary:</label>
+                        <input type="number" formControlName="salary" class="form-control" id="salary" placeholder="Enter Salary">
+                      </div><br>
+                      <div class="col-md-4">
+                        <label for="dept">Department:</label>
+                        <input type="text" formControlName="dept" class="form-control" id="dept" placeholder="Enter Department">
+                    </div><br>
+                    <div class="col-md-4">
+                      <label for="designation">Designation:</label>
+                      <input type="text" formControlName="designation" class="form-control"  placeholder="Enter Designation">
+                   </div>
+                </div>
+                <br>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="eid">ID:</label>
+                        <input type="number" formControlName="eid" class="form-control" id="eid" placeholder="Enter ID" required>
+                      </div><br>
+                      <div class="col-md-6">
+                        <label for="pwd">Password:</label>
+                        <input type="password" formControlName="pwd" class="form-control" id="pwd" placeholder="Enter Password" required>
+                    </div><br>
+                </div><br><br>
+
+                  <p class="text-center"><button type="submit" class="btn btn-success btn-lg text-center">Submit</button></p>
+                </form>
+      
+     </div>
+  </div>
+
+
+</div>
