@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EmpService } from '../services/employeeService.component';
+import { inventoryDto } from './inventoryDto.model';
 
 @Component({
   selector: 'app-inventory',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InventoryComponent implements OnInit {
 
-  constructor() { }
+  stock: inventoryDto[] = [];
+
+  constructor(private empService: EmpService) { }
 
   ngOnInit() {
+
+    this.empService.inventory().subscribe((data) => {
+      this.stock = data;
+    },
+      err => {
+        alert("Product not found !");
+      },
+      () => { console.log('Method Executed') }
+    );
+
   }
 
 }

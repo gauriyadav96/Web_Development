@@ -19,6 +19,7 @@ export class EmployeeComponent implements OnInit {
 
     this.empService.emps().subscribe((data) => {
       this.emps = data;
+
     },
       err => {
         alert("Employee not found !");

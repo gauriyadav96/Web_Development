@@ -16,6 +16,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { EmpService } from './services/employeeService.component';
+import { RejectComponent } from './reject/reject.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { EmpService } from './services/employeeService.component';
     DashboardComponent,
     EmployeeComponent,
     PricingComponent,
-    InventoryComponent
+    InventoryComponent,
+    RejectComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule,HttpClientModule],
   providers: [LoginService, AuthDashService, EmpService],

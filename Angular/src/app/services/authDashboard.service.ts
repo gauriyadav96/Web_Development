@@ -1,6 +1,8 @@
 
 import { Injectable } from '@angular/core';
 import { CanActivate,Router} from '@angular/router';
+import { EmpService} from './employeeService.component'
+
 
 
 @Injectable({
@@ -9,20 +11,24 @@ import { CanActivate,Router} from '@angular/router';
 
 export class AuthDashService implements CanActivate {
 
-  constructor(private route:Router ) { }
+  constructor(private route:Router, private empService: EmpService ) { }
 
   canActivate():boolean{
-      let user=localStorage.getItem('username');
-      // alert(user);
-      if(user=="yadav.gau"){
-          alert('Successfully authorized to get dashboard url');
-            return true;
-      }else{
-          alert('unauthorized to get the url');
-          //this.route.navigate(['/reject']);
-            return false;
-      }
+
+          let userStatus = localStorage.getItem('auth_status');
+
+          if(JSON.parse(userStatus)===true){
+              alert('Successfully authorized to get dashboard url');
+
+                return true;
+          }else{
+              alert('unauthorized to get the url');
+              this.route.navigate(['/login']);
+                return false;
+          }
    }
 
 
 }
+
+

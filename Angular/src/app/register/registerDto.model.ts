@@ -6,6 +6,6 @@ export class registerDto{
     salary:number;
     dept:string;
     designation:string;
-    eid:number;
+    username:string;
     pwd:string;
 }

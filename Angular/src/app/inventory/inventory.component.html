@@ -16,14 +16,12 @@
                  </tr>
               </thead>
               <tbody>
-                  <!-- <tr *ngFor="let emp of emps">
-                      <td>{{ emp.eid }}</td>
-                      <td>{{ emp.fname }}</td>
-                      <td>{{ emp.dept }}</td>
-                      <td>{{ emp.designation }}</td>
-                      <td>{{ emp.salary }}</td>
-                      <td>{{ emp.contact }}</td>
-                  </tr> -->
+                  <tr *ngFor="let s of stock">
+                      <td>{{ s.id }}</td>
+                      <td>{{ s.name }}</td>
+                      <td>{{ s.quantity }}</td>
+
+                  </tr>
               </tbody>
           </table>
       </div>
